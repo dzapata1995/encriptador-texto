@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encriptador de texto | Challenge Alure</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 <body>
-    
+    <div class="container">
+        <header class="logo">
+            <img src="src/img/logo.png" alt="logo_alure">
+        </header>
+        <main>
+            <section>
+                <div class="section__text-area">
+                    <textarea id="textarea-text" placeholder="Ingrese el texto aqui" cols="50" rows="15"></textarea>
+                    <i class="fa-solid fa-xmark clear-icon" id="clear-icon" onclick="limpiarTextarea()"></i>
+                </div>
+                <div class="section__buttons">
+                    <div class="box__alert">
+                        <p>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Solo letras minusculas y sin acentos
+                        </p>
+                    </div>
+                    <div class="box__buttons">
+                        <button class="btn__primary" onclick="encriptarTexto()">Encriptar</button>
+                        <button class="btn__secondary" onclick="desencriptarTexto()">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div class="box__message">
+                    <div class="box__message-initial">
+                        <div class="box__message-img">
+                            <img src="src/img/aside.png" alt="person_img">
+                        </div>
+                        <div class="box__message-text">
+                            <h3>Ningun mensaje fue encontrado</h3>
+                            <p> Ingrese el texto que desee encriptar o desencriptar</p>
+                        </div>
+                    </div>
+                    <div class="box__message-transform">
+                        <div class="transform-text">
+                            <p id="result"></p>
+                        </div>
+                        <div class="transform-copiar">
+                            <button onclick="copiarTexto()">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="src/js/index.js"></script>
+    <script src="src/js/validacion.js"></script>
 </body>
 </html>
